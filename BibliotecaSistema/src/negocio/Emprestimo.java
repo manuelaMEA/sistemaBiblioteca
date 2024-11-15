@@ -1,11 +1,11 @@
-package Sistema;
-
+package negocio;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import dados.Repositorio;
 
 public class Emprestimo {
 	
-	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+	private SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	private String idLivro;
 	private String idUsuario;
 	private Livro livro;
@@ -13,11 +13,11 @@ public class Emprestimo {
     private String devolucaoString;
     private String emprestimoString;
 	
-	public Emprestimo(String idUsuario, String idLivro, Calendar dataEmprestimo, Calendar dataDevolucao, RepositorioLivros repositorioLivros, RepositorioUsuarios repositorioUsuarios) {
+	public Emprestimo(String idUsuario, String idLivro, Calendar dataEmprestimo, Calendar dataDevolucao, Repositorio<Livro> repositorioLivros, Repositorio<Usuario> repositorioUsuarios) {
 		this.idUsuario = idUsuario;
 		this.idLivro = idLivro;
-		this.usuario = repositorioUsuarios.buscarUsuarioPorId(idUsuario);
-		this.livro = repositorioLivros.buscarLivroPorId(idLivro);
+		this.usuario = repositorioUsuarios.buscar(idUsuario);
+		this.livro = repositorioLivros.buscar(idLivro);
         this.devolucaoString = sdf.format(dataDevolucao.getTime());
         this.emprestimoString = sdf.format(dataEmprestimo.getTime());
 	}
@@ -44,6 +44,10 @@ public class Emprestimo {
 	
 	public Livro getLivro() {
 		return livro;
+	}
+	@Override
+	public String toString() {
+		return "Empréstimo: [" + "Livro:" + livro + "ID:" + idLivro + "Usuário:" + idUsuario + usuario + "Data de Empréstimo:" + emprestimoString + "Data de Devolução:" + devolucaoString + "]";
 	}
 	
 }

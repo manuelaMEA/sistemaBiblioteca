@@ -1,6 +1,6 @@
-package Sistema;
+package negocio;
 
-public class Usuario {
+public abstract class Usuario {
 	
 	private String id;
 	private String nome;
@@ -29,7 +29,7 @@ public class Usuario {
 	}
 	
 	public String toString() {
-        return nome + " (" + id + ")";
+        return nome + " (ID: " + id + ")";
     }
 
 
