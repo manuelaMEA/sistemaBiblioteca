@@ -35,7 +35,7 @@ public class Livro {
 	}
 	@Override
 	public String toString() {
-        return titulo + " por " + autor + " (ISBN: " + id + ")";
+        return titulo + " por " + autor + " (ISBN: " + id + ")\n";
     }
 
 }

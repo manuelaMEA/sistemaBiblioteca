@@ -47,7 +47,7 @@ public class Emprestimo {
 	}
 	@Override
 	public String toString() {
-		return "Empréstimo: [" + "Livro:" + livro + "ID:" + idLivro + "Usuário:" + idUsuario + usuario + "Data de Empréstimo:" + emprestimoString + "Data de Devolução:" + devolucaoString + "]";
+		return "Empréstimo: " + "\nLivro:" + livro + "Usuário:" + usuario + "Data de Empréstimo:" + emprestimoString + "\nData de Devolução: " + devolucaoString + "\n";
 	}
 	
 }

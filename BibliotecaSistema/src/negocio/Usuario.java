@@ -29,7 +29,7 @@ public abstract class Usuario {
 	}
 	
 	public String toString() {
-        return nome + " (ID: " + id + ")";
+        return nome + " (ID: " + id + ")\n";
     }
 
 

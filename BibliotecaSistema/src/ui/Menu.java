@@ -17,7 +17,7 @@ public class Menu{
 
     public void exibirMenu() {
         while (true) {
-            System.out.println("\nBem Vindo(a) ao Sistema Bibliotecário!");
+            System.out.println("\nBem Vindo(a) à Paplioteca!");
             System.out.println("======================================");
             System.out.println("1. Acessar como usuário");
             System.out.println("2. Acessar como administrador");
